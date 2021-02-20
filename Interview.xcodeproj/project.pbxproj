@@ -85,11 +85,10 @@
 		6AB24DBE23EB546D00530BA5 /* Interview */ = {
 			isa = PBXGroup;
 			children = (
-				6AB24DF923EB55D400530BA5 /* Resources */,
-				6AB24DEB23EB54F500530BA5 /* Scenes */,
-				6AB24DBF23EB546D00530BA5 /* AppDelegate.swift */,
-				6AB24DC123EB546D00530BA5 /* SceneDelegate.swift */,
-				6AB24DCD23EB546F00530BA5 /* Info.plist */,
+				A43ADC3725E0FB1F0043737B /* Application */,
+				A43ADC3B25E0FB3B0043737B /* Data */,
+				A43ADC3A25E0FB320043737B /* Domain */,
+				A43ADC3C25E0FB4D0043737B /* Presentation */,
 			);
 			path = Interview;
 			sourceTree = "<group>";
@@ -103,39 +102,28 @@
 			path = InterviewTests;
 			sourceTree = "<group>";
 		};
-		6AB24DEB23EB54F500530BA5 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				6AB24DEC23EB550100530BA5 /* ListContacts */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		6AB24DEC23EB550100530BA5 /* ListContacts */ = {
 			isa = PBXGroup;
 			children = (
-				6AB24DED23EB551000530BA5 /* Models */,
-				6AB24DF323EB555B00530BA5 /* Services */,
-				6AB24DF023EB552D00530BA5 /* ViewModels */,
+				6AB24DF023EB552D00530BA5 /* Presenters */,
 				6AB24DF623EB557200530BA5 /* Views */,
 			);
 			path = ListContacts;
 			sourceTree = "<group>";
 		};
-		6AB24DED23EB551000530BA5 /* Models */ = {
+		6AB24DED23EB551000530BA5 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				6AB24DEE23EB552100530BA5 /* Contact.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
-		6AB24DF023EB552D00530BA5 /* ViewModels */ = {
+		6AB24DF023EB552D00530BA5 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 				6AB24DF123EB554300530BA5 /* ListContactsViewModel.swift */,
 			);
-			path = ViewModels;
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		6AB24DF323EB555B00530BA5 /* Services */ = {
@@ -162,6 +150,58 @@
 				6AB24DCA23EB546F00530BA5 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A43ADC3725E0FB1F0043737B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6AB24DF923EB55D400530BA5 /* Resources */,
+				6AB24DBF23EB546D00530BA5 /* AppDelegate.swift */,
+				6AB24DC123EB546D00530BA5 /* SceneDelegate.swift */,
+				6AB24DCD23EB546F00530BA5 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A43ADC3A25E0FB320043737B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A43ADC4225E0FBB10043737B /* UseCases */,
+				6AB24DED23EB551000530BA5 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A43ADC3B25E0FB3B0043737B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A43ADC4125E0FB9B0043737B /* DTOs */,
+				6AB24DF323EB555B00530BA5 /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A43ADC3C25E0FB4D0043737B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6AB24DEC23EB550100530BA5 /* ListContacts */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A43ADC4125E0FB9B0043737B /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				6AB24DEE23EB552100530BA5 /* Contact.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		A43ADC4225E0FBB10043737B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S96TK27X79;
-				INFOPLIST_FILE = Interview/Info.plist;
+				INFOPLIST_FILE = Interview/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S96TK27X79;
-				INFOPLIST_FILE = Interview/Info.plist;
+				INFOPLIST_FILE = Interview/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
