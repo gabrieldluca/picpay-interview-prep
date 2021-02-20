@@ -28,8 +28,8 @@ class ListContactsViewController: UIViewController, UITableViewDataSource, UITab
         return tableView
     }()
     
-    var contacts = [Contact]()
-    var viewModel: ListContactsViewModel!
+    var contacts = [ContactDTO]()
+    var viewModel: ListContactsPresenter!
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -48,7 +48,7 @@ class ListContactsViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = ListContactsViewModel()
+        viewModel = ListContactsPresenter()
         configureViews()
         
         navigationController?.title = "Lista de contatos"
@@ -67,7 +67,7 @@ class ListContactsViewController: UIViewController, UITableViewDataSource, UITab
         ])
     }
     
-    func isLegacy(contact: Contact) -> Bool {
+    func isLegacy(contact: ContactDTO) -> Bool {
         return UserIdsLegacy.isLegacy(id: contact.id)
     }
     

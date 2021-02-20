@@ -1,6 +1,6 @@
 import Foundation
 
-class Contact: Decodable {
+class ContactDTO: Decodable {
     var id: Int
     var name: String = ""
     var photoURL = ""
